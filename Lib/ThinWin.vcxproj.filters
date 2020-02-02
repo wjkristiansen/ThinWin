@@ -13,6 +13,7 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Inc\ThinWin.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">
