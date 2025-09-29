@@ -11,9 +11,3 @@ add_subdirectory(Lib)
 if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/ThinWinSample/CMakeLists.txt")
     add_subdirectory(ThinWinSample)
 endif()
-
-# Installation of include files
-install(DIRECTORY Inc/
-    DESTINATION include/ThinWin
-    FILES_MATCHING PATTERN "*.h" PATTERN "*.hpp"
-)

@@ -49,18 +49,3 @@ endif()
 
 # Use precompiled headers
 target_precompile_headers(ThinWin PRIVATE stdafx.h)
-
-# Installation
-install(TARGETS ThinWin
-    EXPORT ThinWinTargets
-    RUNTIME DESTINATION bin
-    LIBRARY DESTINATION lib
-    ARCHIVE DESTINATION lib
-    INCLUDES DESTINATION include
-)
-
-install(EXPORT ThinWinTargets
-    FILE ThinWinTargets.cmake
-    NAMESPACE ThinWin::
-    DESTINATION lib/cmake/ThinWin
-)
