@@ -4,8 +4,7 @@ cmake_minimum_required(VERSION 3.24)
 # Define the library
 add_library(ThinWin STATIC
     ThinWin.cpp
-    stdafx.cpp
-    stdafx.h
+    pch.h
     targetver.h
 )
 
@@ -48,4 +47,4 @@ if(WIN32)
 endif()
 
 # Use precompiled headers
-target_precompile_headers(ThinWin PRIVATE stdafx.h)
+target_precompile_headers(ThinWin PRIVATE pch.h)
