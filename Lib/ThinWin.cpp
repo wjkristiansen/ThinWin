@@ -21,7 +21,7 @@ ATOM CWindow::RegisterWindowClass(HINSTANCE hInstance, PCSTR pszMenuName, HCURSO
     wcex.hIcon          = hIcon;
     wcex.hCursor        = hCursor;
     wcex.hbrBackground  = hbrBackground;
-    wcex.lpszMenuName   = nullptr;
+    wcex.lpszMenuName   = pszMenuName;
     wcex.lpszClassName  = "ThinWinDefault";
     wcex.hIconSm        = hIconSm;
 
@@ -62,7 +62,6 @@ CWindow::CWindow(
     _In_ int nHeight,
     _In_opt_ HWND hWndParent,
     _In_opt_ HMENU hMenu,
-    _In_opt_ LPVOID lpParam,
     _In_ DWORD dwExStyle
 )
 {
@@ -86,7 +85,7 @@ LRESULT CWindow::WindowProc(UINT message, WPARAM wParam, LPARAM lParam)
     case WM_PAINT:
         {
             PAINTSTRUCT ps;
-            HDC hdc = BeginPaint(m_hWnd, &ps);
+            [[maybe_unused]] HDC hdc = BeginPaint(m_hWnd, &ps);
             // TODO: Add any drawing code that uses hdc here...
             EndPaint(m_hWnd, &ps);
         }

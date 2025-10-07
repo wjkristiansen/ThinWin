@@ -27,7 +27,6 @@ public:
         _In_ int nHeight = 0,
         _In_opt_ HWND hWndParent = NULL,
         _In_opt_ HMENU hMenu = NULL,
-        _In_opt_ LPVOID lpParam = nullptr,
         _In_ DWORD dwExStyle = 0
     );
 
