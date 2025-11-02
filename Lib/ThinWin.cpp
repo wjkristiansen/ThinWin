@@ -42,7 +42,7 @@ LRESULT CALLBACK CWindow::WndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lP
         }
     }
 
-    CWindow *pWindow = reinterpret_cast<CWindow *>(GetWindowLongPtrW(hWnd, 0));
+    CWindow *pWindow = reinterpret_cast<CWindow *>(GetWindowLongPtrA(hWnd, 0));
     if (pWindow)
     {
         return pWindow->WindowProc(uMsg, wParam, lParam);
